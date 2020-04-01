@@ -13,25 +13,16 @@ window.onload = function () {
 
     var ctx = document.getElementById('bill-split-graph');
     var myChart = new Chart(ctx, {
-        type: 'polarArea',
-        data: {
-            labels: fillArray(`$${result.toFixed(2)}`, guests),
-            datasets: [{
-                data: fillArray(result.toFixed(2), guests),
-                backgroundColor: lightColors,
-                borderColor: fillArray(`#333` , guests),
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
-        }
+      type: 'polarArea',
+      data: {
+        labels: fillArray(`$${result.toFixed(2)}`, guests),
+        datasets: [{
+            data: fillArray(result.toFixed(2), guests),
+            backgroundColor: lightColors,
+            borderColor: fillArray(`#333` , guests),
+            borderWidth: 1
+        }]
+      }
     });
   }
 
