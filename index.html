@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.4/randomColor.min.js"></script>
+  </head>
+  <body>
+    <h1>Bill Split Calculator</h1>
+
+    <section class="form">
+      <article class="col">
+        <form>
+          <label for="total">Bill Total: $</label>
+          <input id="total" name="total" type="number" min="0" step="0.01" />
+          <br />
+          <label for="guests">Number of Guests:</label>
+          <input id="guests" name="guests" type="number" min="1" step="1" />
+        </form>
+      </article>
+
+      <article class="col graph-container">
+        <h2 id="result"></h2>
+        <canvas id="bill-split-graph"></canvas>
+      </article>
+    </section>
+  </body>
+</html>
